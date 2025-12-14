@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Young+Serif&family=Outfit:wght@400;600;700&display=swap');
+
+
+*{
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+body{
+    background: hsl(30, 54%, 90%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+font-family: 'Outfit', sans-serif;}
+main{
+    display: flex;
+    flex-direction: column;
+     margin: 2rem 1rem;
+    padding: 20px;
+    height:auto ;
+    border-radius: 20px;
+    width: 100%;
+  max-width: 700px;
+    background-color: #fff;
+    margin-bottom: 30px;
+}
+
+   img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+}
+
+h1{
+    font-family: 'Young Serif';
+    font-weight: 400;
+    font-size: 30px;
+    margin-bottom: 25px;
+}
+h2{
+    font-family: 'Young Serif';
+    font-weight: 300;
+    font-size: 20px;
+    margin: 25px 0;
+    color:hsl(332, 51%, 32%) ;
+}
+
+.time{
+    background-color:hsl(332, 51%, 32% , 0.1) ;
+    margin: 1.25rem 0;
+    padding: 15px;
+    border-radius: 20px;
+}
+.time h2{
+    font-size: 15px;
+    color:hsl(332, 51%, 32%);
+    margin-top: 0;
+}
+.time ul li{
+ margin: 15px;
+}
+
+ul li {
+  margin-bottom: 0.75rem;
+}
+
+ul li::marker {
+  color: hsl(14, 45%, 36%);
+}
+ol li{
+    margin-bottom: 15px;
+}
+ol {
+  list-style: none;
+  counter-reset: item;
+}
+ol strong {
+  font-weight: 600;
+}
+
+ol li {
+  counter-increment: item;
+  position: relative;
+  padding-left: 1.5rem;
+}
+
+ol li::before {
+  content: counter(item) ".";
+  position: absolute;
+  left: 0;
+  color: hsl(14, 45%, 36%);;
+  font-weight: 500;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+table tr {
+  border-bottom: 1px solid #ddd;
+}
+
+table td {
+  padding: 1rem 0;
+  font-weight: 700;
+  color:hsl(332, 51%, 32%) ;
+}
+table th{
+    font-weight: 500;
+    text-align: left;
+}
+table tr:last-child {
+  border-bottom: none;
+}
+@media (max-width: 768px) {
+  main {
+    padding: 1.5rem;
+    margin-top: 0;
+  }
+}
