@@ -1,83 +1,150 @@
 @import url('https://fonts.googleapis.com/css2?family=Young+Serif&family=Outfit:wght@400;600;700&display=swap');
 
-
-*{
-    margin: 0;
-    border: 0;
-    box-sizing: border-box;
-}
-body{
-    background: hsl(30, 54%, 90%);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-font-family: 'Outfit', sans-serif;}
-main{
-    display: flex;
-    flex-direction: column;
-     margin: 2rem 1rem;
-    padding: 20px;
-    height:auto ;
-    border-radius: 20px;
-    width: 100%;
-  max-width: 700px;
-    background-color: #fff;
-    margin-bottom: 30px;
+/*
+   Reset & Box Sizing
+    */
+html {
+  box-sizing: border-box;
 }
 
-   img {
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+/*
+   CSS Variables (Design System)
+    */
+:root {
+  /* Colors */
+  --clr-bg: hsl(30, 54%, 90%);
+  --clr-white: #ffffff;
+  --clr-primary: hsl(14, 45%, 36%);
+  --clr-secondary: hsl(332, 51%, 32%);
+  --clr-secondary-light: hsl(332, 51%, 32%, 0.1);
+  --clr-border: #ddd;
+
+  /* Fonts */
+  --ff-body: 'Outfit', sans-serif;
+  --ff-heading: 'Young Serif', serif;
+
+  /* Font sizes (Mobile First) */
+  --fs-body: 1rem;
+  --fs-h1: 1.75rem;
+  --fs-h2: 1.25rem;
+
+  /* Spacing */
+  --space-xs: 0.5rem;
+  --space-sm: 0.75rem;
+  --space-md: 1.25rem;
+  --space-lg: 2rem;
+
+  /* Border Radius */
+  --radius-sm: 0.75rem;
+  --radius-md: 1.25rem;
+}
+
+/*
+   Base Styles (Mobile)
+    */
+body {
+  background-color: var(--clr-bg);
+  font-family: var(--ff-body);
+  font-size: var(--fs-body);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  line-height: 1.6;
+}
+
+/*
+   Layout
+    */
+main {
   width: 100%;
-  max-width: 100%;
+  padding: var(--space-md);
+  background-color: var(--clr-white);
+  border-radius: var(--radius-md);
+}
+
+/*
+section
+*/
+section{
+    margin-bottom: var(--space-lg);
+}
+/*
+   Media Elements
+    */
+img {
+  width: 100%;
   height: auto;
-  border-radius: 12px;
+  border-radius: var(--radius-sm);
 }
 
-h1{
-    font-family: 'Young Serif';
-    font-weight: 400;
-    font-size: 30px;
-    margin-bottom: 25px;
-}
-h2{
-    font-family: 'Young Serif';
-    font-weight: 300;
-    font-size: 20px;
-    margin: 25px 0;
-    color:hsl(332, 51%, 32%) ;
+/*
+   Typography
+    */
+h1,
+h2 {
+  font-family: var(--ff-heading);
+  font-weight: 400;
 }
 
-.time{
-    background-color:hsl(332, 51%, 32% , 0.1) ;
-    margin: 1.25rem 0;
-    padding: 15px;
-    border-radius: 20px;
-}
-.time h2{
-    font-size: 15px;
-    color:hsl(332, 51%, 32%);
-    margin-top: 0;
-}
-.time ul li{
- margin: 15px;
+h1 {
+    margin-top: var(--space-md);
+  font-size: var(--fs-h1);
+  margin-bottom: var(--space-md);
 }
 
-ul li {
-  margin-bottom: 0.75rem;
+h2 {
+  font-size: var(--fs-h2);
+  color: var(--clr-secondary);
+  margin: var(--space-lg) 0 var(--space-sm);
+}
+
+p {
+  margin-bottom: var(--space-md);
+}
+
+/*
+   Preparation Time Box
+    */
+.time {
+  background-color: var(--clr-secondary-light);
+  padding: var(--space-lg);
+  border-radius: var(--radius-md);
+  margin: var(--space-lg) 0;
+}
+
+.time h2 {
+  margin-top: 0;
+  font-size: 1rem;
+}
+
+/*
+   Lists
+    */
+ul li,
+ol li {
+  margin-bottom: var(--space-sm);
 }
 
 ul li::marker {
-  color: hsl(14, 45%, 36%);
+  color: var(--clr-primary);
 }
-ol li{
-    margin-bottom: 15px;
+
+ul li{
+     margin-left: var(--space-md);
 }
+/* Ordered List (Custom Counter) */
 ol {
   list-style: none;
   counter-reset: item;
-}
-ol strong {
-  font-weight: 600;
 }
 
 ol li {
@@ -90,33 +157,81 @@ ol li::before {
   content: counter(item) ".";
   position: absolute;
   left: 0;
-  color: hsl(14, 45%, 36%);;
-  font-weight: 500;
+  color: var(--clr-primary);
+  font-weight: 600;
 }
+
+/*
+   Table
+    */
 table {
   width: 100%;
   border-collapse: collapse;
 }
 
 table tr {
-  border-bottom: 1px solid #ddd;
+  border-bottom: 1px solid var(--clr-border);
 }
 
-table td {
-  padding: 1rem 0;
-  font-weight: 700;
-  color:hsl(332, 51%, 32%) ;
-}
-table th{
-    font-weight: 500;
-    text-align: left;
-}
 table tr:last-child {
   border-bottom: none;
 }
-@media (max-width: 768px) {
-  main {
-    padding: 1.5rem;
-    margin-top: 0;
+
+table th {
+  text-align: left;
+  font-weight: 500;
+  padding: var(--space-sm) 0;
+}
+
+table td {
+  padding: var(--space-sm) 0;
+  font-weight: 700;
+  color: var(--clr-secondary);
+}
+
+/*
+   Footer / Attribution
+    */
+.attribution {
+  font-size: 0.6875rem;
+  text-align: center;
+  margin-bottom: var(--space-md);
+  margin-top: var(--space-md);
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+/*
+   Tablet (>= 768px)
+    */
+@media (min-width: 48em) {
+  :root {
+    --fs-h1: 2rem;
+    --fs-h2: 1.4rem;
   }
+
+  main {
+    max-width: 700px;
+    padding: var(--space-lg);
+    margin: var(--space-lg) auto;
+  }
+}
+
+/*
+   Desktop (>= 1024px)
+    */
+@media (min-width: 64em) {
+  :root {
+    --fs-h1: 2.5rem;
+    --fs-h2: 1.5rem;
+    --fs-body:1.25rem;
+  }
+  main{
+    max-width: 880px;
+  }
+  .time h2 {
+  font-size: 1.25rem;
+}
 }

@@ -1,38 +1,44 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- displays site properly based on user's device -->
+    <link href="style.css" rel="stylesheet" />
 
+    <!-- favicon -->
     <link
       rel="icon"
       type="image/png"
       sizes="32x32"
       href="./assets/images/favicon-32x32.png"
     />
-
+    <!-- title website -->
     <title>Frontend Mentor | Recipe page</title>
-
-    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-    <!-- <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style> -->
-    <link rel="stylesheet" href="style.css" />
   </head>
+
+
+
   <body>
+
     <main>
-      <img src="assets/images/image-omelette.jpeg" alt="omelette" />
+        <!-- image -->
+      <fiqure class="image">
+        <img src="./assets/images/image-omelette.jpeg" alt="image-omelette" />
+      </fiqure>
 
-      <h1>Simple Omelette Recipe</h1>
+      <!-- Simple Omelette Recipe  -->
+      <section class="simple-omelette">
+        <h1>Simple Omelette Recipe</h1>
+        <p>
+          An easy and quick dish, perfect for any meal. This classic omelette
+          combines beaten eggs cooked to perfection, optionally filled with your
+          choice of cheese, vegetables, or meats.
+        </p>
+      </section>
 
-      <p>
-        An easy and quick dish, perfect for any meal. This classic omelette
-        combines beaten eggs cooked to perfection, optionally filled with your
-        choice of cheese, vegetables, or meats.
-      </p>
+      <hr>
 
+      <!-- Preparation time -->
       <section class="time">
         <h2>Preparation time</h2>
         <ul>
@@ -41,7 +47,10 @@
           <li><strong>Cooking:</strong> 5 minutes</li>
         </ul>
       </section>
-      <h2>Ingredients</h2>
+
+      <!--Ingredients  -->
+      <section class="Ingredients">
+        <h2>Ingredients</h2>
       <ul>
         <li>2-3 large eggs</li>
         <li>Salt, to taste</li>
@@ -51,9 +60,13 @@
           Optional fillings: cheese, diced vegetables, cooked meats, herbs
         </li>
       </ul>
+      </section>
 
+      <hr>
 
-      <h2>Instructions</h2>
+      <!--Instructions  -->
+      <section class="instructions">
+              <h2>Instructions</h2>
       <ol>
         <li>
           <strong> Beat the eggs:</strong> In a bowl, beat the eggs with a pinch
@@ -84,7 +97,14 @@
           needed.
         </li>
       </ol>
-      <h2>Nutrition</h2>
+      </section>
+
+      <hr>
+
+
+      <!-- table -->
+      <section class="table">
+        <h2>Nutrition</h2>
       <p>
         The table below shows nutritional values per serving without the
         additional fillings.
@@ -107,13 +127,16 @@
           <td>22g</td>
         </tr>
       </table>
+      </section>
     </main>
 
-    <div class="attribution">
+    <!-- footer -->
+     <footer>
+            <div class="attribution">
       Challenge by
       <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
         >Frontend Mentor</a
       >. Coded by <a href="#">Nevikai</a>.
-    </div>
+     </footer>
   </body>
 </html>
