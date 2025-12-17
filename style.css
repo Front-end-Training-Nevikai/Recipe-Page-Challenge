@@ -35,7 +35,7 @@ html {
   --fs-body: 1rem;
   --fs-h1: 1.75rem;
   --fs-h2: 1.25rem;
-  --fs-fig: 0.5rem;
+  --text-muted: 0.5rem;
 
   /* Spacing */
   --space-xs: 0.5rem;
@@ -86,7 +86,7 @@ img {
   border-radius: var(--radius-sm);
 }
 figcaption {
-  font-size: var(--fs-fig);
+  font-size: var(--text-muted);
   color: #9a9a9a9e;
 }
 
@@ -114,37 +114,12 @@ h2 {
 p {
   margin-bottom: var(--space-md);
 }
-
-/*
-   Preparation Time Box
-    */
-.time {
-  background-color: var(--clr-secondary-light);
-  padding: var(--space-lg);
-  border-radius: var(--radius-md);
-  margin: var(--space-lg) 0;
-}
-
-.time h2 {
-  margin-top: 0;
-  font-size: 1rem;
-}
-
 /*
    Lists
     */
 ul li,
 ol li {
   margin-bottom: var(--space-sm);
-}
-
-ul li::marker {
-  color: var(--clr-primary);
-}
-
-.ingredients,
-.time ul li {
-  margin-left: var(--space-md);
 }
 /* Ordered List (Custom Counter) */
 ol {
@@ -165,6 +140,31 @@ ol li::before {
   color: var(--clr-primary);
   font-weight: 600;
 }
+ul li::marker {
+  color: var(--clr-primary);
+}
+
+.ingredients,
+.time ul li {
+  margin-left: var(--space-md);
+}
+
+/*
+   Preparation Time Box
+    */
+.time {
+  background-color: var(--clr-secondary-light);
+  padding: var(--space-lg);
+  border-radius: var(--radius-md);
+  margin: var(--space-lg) 0;
+}
+
+.time h2 {
+  margin-top: 0;
+  font-size: 1rem;
+}
+
+
 
 /*
    Table
@@ -216,7 +216,7 @@ table td {
   }
 
   main {
-    max-width: 700px;
+    max-width: 43.75rem;
     padding: var(--space-lg);
     margin: var(--space-lg) auto;
   }
