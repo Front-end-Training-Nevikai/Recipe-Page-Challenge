@@ -24,7 +24,7 @@ This project is a simple Recipe Page built to replicate the design provided by F
 ### Links
 
 - Solution URL: [Frontend Mentor Recipe Page Challenge](https://www.frontendmentor.io/challenges/recipe-page-KiTsR8QQKm)
-- Live Site URL: *(Add your live site URL here)*
+- Live Site URL: [View Live Site](https://front-end-training-nevikai.github.io/Recipe-Page-Challenge/)
 
 ## My Process
 
