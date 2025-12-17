@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Young+Serif&family=Outfit:wght@400;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Young+Serif&family=Outfit:wght@400;600;700&display=swap");
 
 /*
    Reset & Box Sizing
@@ -28,13 +28,14 @@ html {
   --clr-border: #ddd;
 
   /* Fonts */
-  --ff-body: 'Outfit', sans-serif;
-  --ff-heading: 'Young Serif', serif;
+  --ff-body: "Outfit", sans-serif;
+  --ff-heading: "Young Serif", serif;
 
   /* Font sizes (Mobile First) */
   --fs-body: 1rem;
   --fs-h1: 1.75rem;
   --fs-h2: 1.25rem;
+  --fs-fig: 0.5rem;
 
   /* Spacing */
   --space-xs: 0.5rem;
@@ -74,16 +75,19 @@ main {
 /*
 section
 */
-section{
-    margin-bottom: var(--space-lg);
+section {
+  margin-bottom: var(--space-lg);
 }
 /*
    Media Elements
     */
 img {
   width: 100%;
-  height: auto;
   border-radius: var(--radius-sm);
+}
+figcaption {
+  font-size: var(--fs-fig);
+  color: #9a9a9a9e;
 }
 
 /*
@@ -96,7 +100,7 @@ h2 {
 }
 
 h1 {
-    margin-top: var(--space-md);
+  margin-top: var(--space-md);
   font-size: var(--fs-h1);
   margin-bottom: var(--space-md);
 }
@@ -138,8 +142,9 @@ ul li::marker {
   color: var(--clr-primary);
 }
 
-ul li{
-     margin-left: var(--space-md);
+.ingredients,
+.time ul li {
+  margin-left: var(--space-md);
 }
 /* Ordered List (Custom Counter) */
 ol {
@@ -195,8 +200,6 @@ table td {
 .attribution {
   font-size: 0.6875rem;
   text-align: center;
-  margin-bottom: var(--space-md);
-  margin-top: var(--space-md);
 }
 
 .attribution a {
@@ -217,6 +220,10 @@ table td {
     padding: var(--space-lg);
     margin: var(--space-lg) auto;
   }
+  .attribution {
+    margin-top: var(--space-md);
+    margin-bottom: var(--space-md);
+  }
 }
 
 /*
@@ -226,12 +233,16 @@ table td {
   :root {
     --fs-h1: 2.5rem;
     --fs-h2: 1.5rem;
-    --fs-body:1.25rem;
+    --fs-body: 1.25rem;
   }
-  main{
+  main {
     max-width: 880px;
   }
   .time h2 {
-  font-size: 1.25rem;
-}
+    font-size: 1.25rem;
+  }
+  .attribution {
+    margin-top: var(--space-md);
+    margin-bottom: var(--space-md);
+  }
 }
